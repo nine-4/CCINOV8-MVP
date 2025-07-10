@@ -167,3 +167,33 @@ input[type="checkbox"] {
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+.action-select-wrapper select {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23e2e8f0" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+.clickable-link {
+    color: var(--highlight-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.clickable-link:hover {
+    text-decoration: underline;
+    color: var(--font-color); /* Or any highlight color */
+}

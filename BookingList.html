@@ -11,6 +11,13 @@
 
     <div class="dashboard-container">
         <div class="header">
+            <div class="action-select-wrapper">
+                <select id="actionSelect">
+                    <option>Show Booking List</option>
+                    <option>Make Reservation</option>
+                </select>
+            </div>
+            
             <div class="search-tools">
                 <div class="search-field">
                     <input type="text" placeholder="Booking ID/Confirmation Number">
@@ -49,8 +56,16 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><i class="fa-solid fa-house-user"></i></td>
-                        <td><strong>1 Jul 2025</strong><br><span class="time">Tue 21:52</span></td>
-                        <td>Gemma Lua</td>
+
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">
+                                <strong>1 Jul 2025</strong><br><span class="time">Tue 21:52</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">Gemma Lua</a>
+                        </td>
+                        
                         <td>Green Sierra Private Cabin</td>
                         <td>2 Adults</td>
                         <td><strong>05/07/2025</strong><br><span class="day">Sat</span></td>
@@ -63,8 +78,16 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><i class="fa-solid fa-house-user"></i></td>
-                        <td><strong>21 Jun 2025</strong><br><span class="time">Sat 09:25</span></td>
-                        <td>Jenny Fernandez</td>
+
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">
+                                <strong>21 Jun 2025</strong><br><span class="time">Sat 09:25</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">Jenny Fernandez</a>
+                        </td>
+
                         <td>Green Sierra Private Cabin</td>
                         <td>5 Adults</td>
                         <td><strong>23/06/2025</strong><br><span class="day">Mon</span></td>
@@ -77,8 +100,16 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><i class="fa-solid fa-house-user"></i></td>
-                        <td><strong>20 Jun 2025</strong><br><span class="time">Fri 12:20</span></td>
-                        <td></td>
+
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">
+                                <strong>20 Jun 2025</strong><br><span class="time">Fri 12:20</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">Jerry Hernandez</a>
+                        </td>
+
                         <td>Green Sierra Private Cabin</td>
                         <td>8 Adults</td>
                         <td><strong>21/06/2025</strong><br><span class="day">Sat</span></td>
@@ -91,8 +122,16 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><i class="fa-solid fa-house-user"></i></td>
-                        <td><strong>18 Jun 2025</strong><br><span class="time">Wed 18:01</span></td>
-                        <td>Aya Shiela Belarmino</td>
+
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">
+                                <strong>18 Jun 2025</strong><br><span class="time">Wed 18:01</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">Aya Shiela Belarmino</a>
+                        </td>
+
                         <td>Green Sierra Private Cabin</td>
                         <td>7 Adults, 1 FH</td>
                         <td><strong>23/06/2025</strong><br><span class="day">Mon</span></td>
@@ -105,8 +144,16 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><i class="fa-solid fa-house-user"></i></td>
-                        <td><strong>16 Jun 2025</strong><br><span class="time">Wed 19:55</span></td>
-                        <td>Sandra Lim</td>
+
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">
+                                <strong>16 Jun 2025</strong><br><span class="time">Wed 19:55</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="BookingInfo.html" class="clickable-link">Sandra Lim</a>
+                        </td>
+
                         <td>Green Sierra Private Cabin</td>
                         <td>2 Adults</td>
                         <td><strong>30/06/2025</strong><br><span class="day">Mon</span></td>
@@ -121,5 +168,12 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById('actionSelect').addEventListener('change', function () {
+            if (this.value === 'Make Reservation') {
+                window.location.href = 'Booking.html';
+            }
+        });
+    </script>
 </body>
 </html>

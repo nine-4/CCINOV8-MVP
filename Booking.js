@@ -53,8 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // 4. Construct the full "booking link"
             // Use window.location.origin to get the base URL of your current page
             // Or you can specify a fixed base URL like 'https://yourwebsite.com/booking-form'
-            const baseUrl = window.location.origin + window.location.pathname; // Gets current page URL without existing query params
-            const generatedLink = `${baseUrl}?${queryParams}`;
+            //const baseUrl = window.location.origin + window.location.pathname; // Gets current page URL without existing query params
+            const baseUrl = "file:///C:/Users/Gio%20Estrada/Downloads/CCINOV8-MVP-main/PaymentInfo.html";
+            //const generatedLink = `${baseUrl}?${queryParams}`;
+            const generatedLink = `${baseUrl}`;
 
             // 5. Display the link and copy to clipboard
             const outputDiv = document.getElementById('linkOutput');
@@ -96,11 +98,11 @@ const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 // Data for highlights
 // Storing dates as 'YYYY-MM-DD' for easy comparison
 const highlightedDates = {
-    '2025-07-01': 'blue',
-    '2025-07-02': 'blue',
-    '2025-07-03': 'blue',
-    '2025-07-04': 'blue',
-    '2025-07-05': 'blue',
+    '2025-07-01': 'red',
+    '2025-07-02': 'red',
+    '2025-07-03': 'red',
+    '2025-07-04': 'red',
+    '2025-07-05': 'red',
     '2025-08-24': 'red',
     '2025-09-26': 'red',
     '2025-09-27': 'red',
@@ -152,9 +154,21 @@ function createCalendarCard(year, month) {
         dayCell.textContent = String(day).padStart(2, '0');
 
         const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-        if (highlightedDates[dateString]) {
+        /*if (highlightedDates[dateString]) {
             dayCell.classList.add(`highlight-${highlightedDates[dateString]}`);
-        }
+        }*/
+            if (highlightedDates[dateString]) {
+                const color = highlightedDates[dateString];
+                dayCell.classList.add(`highlight-${color}`);
+            
+                if (color === 'red') {
+                    // Make it a link to BookingInfo.html
+                    dayCell.style.cursor = 'pointer';
+                    dayCell.addEventListener('click', () => {
+                        window.location.href = 'BookingInfo.html?date=' + dateString;
+                    });
+                }
+            }
 
         dayCell.addEventListener('click', () => {
             console.log(`Clicked on: ${dateString}`);

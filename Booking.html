@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="./Booking.css">
     </head>
 <body>
+    
     <div class="main-wrapper">
         <div class="container">
             <div class="header">
                 <h1>Quick Reservation</h1>
+                <div class="dropdown-header">
+                    <select id="actionSelect">
+                        <option>Make Reservation</option>
+                        <option>Show Booking List</option>
+                    </select>
+                </div>
+
                 <div class="dropdown-header">
                     <select id="propertySelect"> <option>Green Sierra Private Cabin</option>
                         <option>Option 2</option>
@@ -111,7 +119,7 @@
 
         <div class="calendar-section"> 
             <div class="header-image">
-                <img src="greensierracabin.jpg" alt="Green Sierra Private Cabin">
+                <img src="logo.jpg" alt="Green Sierra Private Cabin">
             </div>
 
             <div class="duration-controls">
@@ -134,5 +142,13 @@
         
     </div>
     <script src="./Booking.js"></script>
+    <script>
+        document.getElementById('actionSelect').addEventListener('change', function () {
+            if (this.value === 'Show Booking List') {
+                window.location.href = 'BookingList.html';
+            }
+        });
+    </script>
+    
 </body>
 </html>

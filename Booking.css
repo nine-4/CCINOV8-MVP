@@ -447,3 +447,36 @@ button {
     font-weight: 500;
 }
 
+.top-button-bar {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.page-toggle-btn {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+}
+
+.page-toggle-btn:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: none;
+}
+
+.page-toggle-btn:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.page-toggle-btn:hover {
+    background-color: #4a4a4a;
+}
