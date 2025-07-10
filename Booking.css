@@ -1,0 +1,449 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    gap: 30px; 
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background-color: #2c2c2c; /* Slightly lighter dark background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 0;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.dropdown-header {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.dropdown-header select {
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 10px;
+    padding-right: 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap; /* Essential for text-overflow */
+    text-overflow: ellipsis;
+}
+
+.dropdown-header .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%; /* Adjust as needed */
+}
+
+.dropdown-header .top-input {
+    background-color: #444;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #f0f0f0;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-row input[type="date"],
+.input-row input[type="time"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-grow: 1; /* Allow inputs to take available space */
+}
+
+.input-row .icon {
+    color: #888;
+    font-size: 18px;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Make calendar icon white/light */
+}
+
+.form-group input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Make time icon white/light */
+}
+
+
+/* Toggle Switch CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.info-icon {
+    font-style: normal;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+.guests-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.guests-input select {
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+    width: 70px; /* Adjust as needed */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.assign-customer-btn {
+    background-color: #3f51b5; /* A shade of blue */
+    color: white;
+}
+
+.assign-customer-btn:hover {
+    background-color: #303f9f;
+}
+
+.custom-rate-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom-rate-input span {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.custom-rate-input input {
+    width: 100px; /* Adjust as needed */
+    text-align: right;
+}
+
+.link-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.generate-payment-link-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Calendar Specific Styles */
+.calendar-section {
+    flex: 2; 
+    min-width: 500px;
+    max-width: 800px;
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0; /* Gap handled by .calendar-section flex */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.duration-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0; /* Gap handled by .calendar-section flex */
+}
+
+.duration-button {
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.duration-button:hover:not(.active) {
+    background-color: #3a3a3a;
+}
+
+.duration-button.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+.duration-button .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e0e0e0"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.duration-button.active .icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.calendar-card {
+    background-color: #444; /* Inner calendar cards get this background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.month-header {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.weekdays div {
+    padding: 5px 0;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 2px;
+}
+
+
+.day-cell {
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.9em;
+    color: #f0f0f0;
+}
+
+.day-cell:hover {
+    background-color: #3a3a3a;
+}
+
+.day-cell.empty {
+    visibility: hidden;
+}
+
+.day-cell.highlight-blue {
+    background-color: #007bff;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+.day-cell.highlight-red {
+    background-color: #e74c3c;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+

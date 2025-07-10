@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Sierra Private Cabin - Quick Reservation</title>
+    <link rel="stylesheet" href="./Booking.css">
+    </head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>Quick Reservation</h1>
+                <div class="dropdown-header">
+                    <select id="propertySelect"> <option>Green Sierra Private Cabin</option>
+                        <option>Option 2</option>
+                        <option>Third Property</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="checkin-date">Check-in Date and Time</label>
+                    <div class="input-row">
+                        <input type="date" id="checkin-date">
+                        <span class="icon">📅</span>
+                        <span>at</span>
+                        <input type="time" value="14:00" id="checkin-time"> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-date">Check-out Date and Time</label>
+                    <div class="input-row">
+                        <input type="date" id="checkout-date">
+                        <span class="icon">📅</span>
+                        <span>at</span>
+                        <input type="time" value="12:00" id="checkout-time"> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Close room in these dates <span class="info-icon">ⓘ</span></label>
+                    <label class="switch">
+                        <input type="checkbox" id="close-room-toggle"> <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Guests</label>
+                    <div class="guests-input">
+                        <span>Adults</span>
+                        <select id="adults-select"> <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <span>Children</span>
+                        <select id="children-select"> <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Booking Status</label>
+                    <select id="booking-status-select"> <option>Pending</option>
+                        <option>Cancelled</option>
+                        <option>Confirmed</option>
+                        <option>Fully Paid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Method of payment</label>
+                    <select id="payment-method-select"> <option>Not Relevant</option>
+                        <option>Paymaya/GCash</option>
+                        <option>Bank Transfer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-email">Customer e-Mail</label> <input type="email" id="customer-email"> </div>
+
+                <div class="form-group">
+                    <label for="customer-info">Customer Information</label>
+                    <textarea id="customer-info" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Set Rate</label>
+                    <div class="custom-rate-input">
+                        <span>P</span>
+                        <input type="text" value="0.00" id="custom-rate-input"> </div>
+                </div>
+
+                <div class="link-button-container">
+                    <button type="button" class="generate-payment-link-btn"> <span>🔗</span> Generate Payment Link
+                    </button>
+                </div>
+
+                <div id="linkOutput" style="margin-top: 20px; text-align: center;">
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="calendar-section"> 
+            <div class="header-image">
+                <img src="greensierracabin.jpg" alt="Green Sierra Private Cabin">
+            </div>
+
+            <div class="duration-controls">
+                <button class="duration-button" data-months="3">
+                    <span class="icon"></span> 3 Months
+                </button>
+                <button class="duration-button" data-months="6">
+                    <span class="icon"></span> 6 Months
+                </button>
+                <button class="duration-button active" data-months="12">
+                    <span class="icon"></span> 1 Year
+                </button>
+                <button class="duration-button" data-months="24">
+                    <span class="icon"></span> 2 Years
+                </button>
+            </div>
+
+            <div id="calendarContainer" class="calendar-grid"></div>
+        </div>
+        
+    </div>
+    <script src="./Booking.js"></script>
+</body>
+</html>

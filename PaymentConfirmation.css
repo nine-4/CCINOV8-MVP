@@ -1,0 +1,87 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f8f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  max-width: 180px; 
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+.section-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f0f6f1;
+  border-left: 6px solid #2d805e;
+  padding: 20px;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2d805e;
+}
+
+a {
+  color: #0a5a46;
+  text-decoration: none;
+}
+
+.card.schedule, .card.pricing {
+  margin-top: 20px;
+}
+
+.rooms {
+  margin-top: 15px;
+}
+
+.rooms ul {
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.rooms li {
+  list-style-type: disc;
+  margin-bottom: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+td {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.total td {
+  border-top: 2px solid #ccc;
+  font-weight: bold;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking/Reservations Dashboard</title>
+    <link rel="stylesheet" href="./BookingList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="header">
+            <div class="search-tools">
+                <div class="search-field">
+                    <input type="text" placeholder="Booking ID/Confirmation Number">
+                </div>
+                <div class="search-field">
+                    <input type="text" placeholder="Customer Name">
+                </div>
+                <button class="btn btn-search"><i class="fas fa-search"></i> Search Tools</button>
+                <button class="btn btn-clear">Clear</button>
+            </div>
+            <div class="report-actions">
+                <button class="btn btn-export">CSV Report Export</button>
+                <button class="btn btn-export">ICS Report Export</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th>ID <i class="fa-solid fa-caret-down"></i></th>
+                        <th>DATE <i class="fa-solid fa-caret-down"></i></th>
+                        <th>CUSTOMER INFORMATION</th>
+                        <th>ROOMS</th>
+                        <th>GUESTS</th>
+                        <th>CHECK-IN <i class="fa-solid fa-caret-down"></i></th>
+                        <th>CHECK-OUT <i class="fa-solid fa-caret-down"></i></th>
+                        <th>NIGHTS <i class="fa-solid fa-caret-down"></i></th>
+                        <th>TOTAL <i class="fa-solid fa-caret-down"></i></th>
+                        <th>STATUS</th>
+                        <th>FROM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><i class="fa-solid fa-house-user"></i></td>
+                        <td><strong>1 Jul 2025</strong><br><span class="time">Tue 21:52</span></td>
+                        <td>Gemma Lua</td>
+                        <td>Green Sierra Private Cabin</td>
+                        <td>2 Adults</td>
+                        <td><strong>05/07/2025</strong><br><span class="day">Sat</span></td>
+                        <td><strong>06/07/2025</strong><br><span class="day">Sun</span></td>
+                        <td>1</td>
+                        <td><strong>₱ 5,550</strong><br><span class="sub-total">₱ 2,875</span></td>
+                        <td><span class="status confirmed">Confirmed</span></td>
+                        <td><span class="source website">Website</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><i class="fa-solid fa-house-user"></i></td>
+                        <td><strong>21 Jun 2025</strong><br><span class="time">Sat 09:25</span></td>
+                        <td>Jenny Fernandez</td>
+                        <td>Green Sierra Private Cabin</td>
+                        <td>5 Adults</td>
+                        <td><strong>23/06/2025</strong><br><span class="day">Mon</span></td>
+                        <td><strong>25/06/2025</strong><br><span class="day">Wed</span></td>
+                        <td>2</td>
+                        <td><strong>₱ 18,400</strong><br><span class="sub-total">₱ 18,400</span></td>
+                        <td><span class="status confirmed">Confirmed</span></td>
+                        <td><span class="source website">Website</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><i class="fa-solid fa-house-user"></i></td>
+                        <td><strong>20 Jun 2025</strong><br><span class="time">Fri 12:20</span></td>
+                        <td></td>
+                        <td>Green Sierra Private Cabin</td>
+                        <td>8 Adults</td>
+                        <td><strong>21/06/2025</strong><br><span class="day">Sat</span></td>
+                        <td><strong>22/06/2025</strong><br><span class="day">Sun</span></td>
+                        <td>1</td>
+                        <td><strong>₱ 9,800</strong></td>
+                        <td><span class="status confirmed">Confirmed</span></td>
+                        <td><span class="source website">Website</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><i class="fa-solid fa-house-user"></i></td>
+                        <td><strong>18 Jun 2025</strong><br><span class="time">Wed 18:01</span></td>
+                        <td>Aya Shiela Belarmino</td>
+                        <td>Green Sierra Private Cabin</td>
+                        <td>7 Adults, 1 FH</td>
+                        <td><strong>23/06/2025</strong><br><span class="day">Mon</span></td>
+                        <td><strong>24/06/2025</strong><br><span class="day">Tue</span></td>
+                        <td>1</td>
+                        <td><strong>₱ 7,100</strong></td>
+                        <td><span class="status cancelled">Cancelled</span></td>
+                        <td><span class="source website">Website</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><i class="fa-solid fa-house-user"></i></td>
+                        <td><strong>16 Jun 2025</strong><br><span class="time">Wed 19:55</span></td>
+                        <td>Sandra Lim</td>
+                        <td>Green Sierra Private Cabin</td>
+                        <td>2 Adults</td>
+                        <td><strong>30/06/2025</strong><br><span class="day">Mon</span></td>
+                        <td><strong>02/07/2025</strong><br><span class="day">Wed</span></td>
+                        <td>2</td>
+                        <td><strong>₱ 13,600</strong><br><span class="sub-total">₱ 6,800</span></td>
+                        <td><span class="status confirmed">Confirmed</span></td>
+                        <td><span class="source website">Website</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
