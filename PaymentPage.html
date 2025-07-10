@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="./PaymentPage.css" rel="stylesheet">
+</head>
+<body>
+  <div class="left-section">
+    
+    <div class="payment-container">
+      <div class="section-title">QR and e-Wallets</div>
+      <div class="payment-option">
+        <button>Maya</button>
+        <button>QR Ph</button>
+        <button>GCash</button>
+        <button>WeChat Pay</button>
+        <button>SPay</button>
+      </div>
+    </div>
+
+    <div class="payment-container">
+      <div class="section-title">Pay in Installments</div>
+      <div class="payment-option">
+        <button>billease</button>
+      </div>
+    </div>
+
+    <div class="divider">Or pay using your debit/credit card or wallet</div>
+
+    <div class="form-container">
+      <div class="section-title">Pay via Debit/Credit Card</div>
+      <div class="form-step">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="form-step">
+        <input type="text" placeholder="Date of Birth (mm/dd/yyyy)" onfocus="(this.type='date')" onblur="(this.type='text')">
+      </div>
+      <div class="form-step">
+        <input type="email" placeholder="Email">
+      </div>
+    </div>
+  </div>
+
+  <div class="right-section">
+    <div class="logo">Greensierra</div>
+    <div class="summary-box">
+      <h2>Order Summary</h2>
+      <div class="amount">Total Amount<br><strong>PHP X,XXX.XX</strong></div>
+      <div class="powered-by">Powered by <strong>Greensierra</strong></div>
+    </div>
+  </div>
+</body>
+</html>

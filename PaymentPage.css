@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+.left-section, .right-section {
+  padding: 2rem;
+}
+.left-section {
+  width: 50%;
+  background-color: #fafafa;
+}
+.right-section {
+  width: 50%;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.payment-container{
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.payment-option {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.payment-option button {
+  padding: 1.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.payment-option button:hover {
+  background-color: #0ed915;
+  color: #fff;
+  border-color: #0ed915;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #999;
+}
+.form-container{
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.form-step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-step input {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.form-step input:focus {
+  border-color: #0ed915;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 255, 4, 0.877);
+}
+.right-section h2 {
+  margin-bottom: 1rem;
+}
+.summary-box {
+  text-align: center;
+}
+.summary-box .amount {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.powered-by {
+  font-size: 0.9rem;
+  color: #888;
+}
+.logo {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
